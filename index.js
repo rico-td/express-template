@@ -40,6 +40,7 @@ app.get("/test", (req, res) => {
 });
 
 // Route to get all todos
+
 app.get("/profiles", (req, res) => {
   res.json({ profiles });
 });
