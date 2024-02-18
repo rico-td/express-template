@@ -85,7 +85,7 @@ const spliced = todos.splice(
   {
     id: 75,
     todo: "swimming",
-    completed: false
+    completed: false,
     userId: 4,
   }
 );
@@ -100,12 +100,14 @@ todos.reverse();
 console.log(todos); // Das Array in umgekehrter Reihenfolge
 
 // concat ()
-const moreTodos = [{ id: 8, todo: "Finish project", completed: false, userId: 1 }];
+const moreTodos = [
+  { id: 8, todo: "Finish project", completed: false, userId: 1 },
+];
 const combinedTodos = todos.concat(moreTodos);
 console.log(combinedTodos); // Ein neues Array, das todos und moreTodos kombiniert
 
 // join ()
-const todoTitles = todos.map(todo => todo.todo);
+const todoTitles = todos.map((todo) => todo.todo);
 const todoString = todoTitles.join(", ");
 console.log(todoString); // Ein String, der die Titel aller Todos enthält, getrennt durch Kommas
 
@@ -130,11 +132,11 @@ todos.fill({ id: 0, todo: "Empty", completed: false, userId: 0 });
 console.log(todos); // Das Array, in dem alle Elemente mit dem angegebenen Wert gefüllt sind
 
 // find ()
-const foundTodo = todos.find(todo => todo.completed === false);
+const foundTodo = todos.find((todo) => todo.completed === false);
 console.log(foundTodo); // Das erste unvollständige Todo-Objekt
 
 // findIndex ()
-const foundIndex = todos.findIndex(todo => todo.completed === false);
+const foundIndex = todos.findIndex((todo) => todo.completed === false);
 console.log(foundIndex); // Der Index des ersten unvollständigen Todo-Objekts im Array
 
 // keys ()
